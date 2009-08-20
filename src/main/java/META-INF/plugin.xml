@@ -1,0 +1,34 @@
+<idea-plugin version="2">
+    <name>Haskell</name>
+    <description>Haskell language support.</description>
+    <version>0.1</version>
+    <vendor url="http://www.alexanderkiel.net" email="alexanderkiel@gmx.net"
+            logo="/net/alexanderkiel/idea_haskell_plugin/normal-partround-lambda-col1-16.png">
+        Alexander Kiel
+    </vendor>
+    <idea-version since-build="8000"/>
+
+    <application-components>
+        <!-- Add your application components here -->
+        <component>
+            <implementation-class>
+                net.alexanderkiel.idea_haskell_plugin.HaskellFileTypeManager
+            </implementation-class>
+        </component>
+    </application-components>
+
+    <project-components>
+        <!-- Add your project components here -->
+    </project-components>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <lang.parserDefinition language="Haskell"
+                               implementationClass="net.alexanderkiel.idea_haskell_plugin.parser.HaskellParserDefinition"/>
+        <lang.braceMatcher language="Haskell"
+                           implementationClass="net.alexanderkiel.idea_haskell_plugin.highlighting.HaskellPairedBraceMatcher"/>
+    </extensions>
+</idea-plugin>
