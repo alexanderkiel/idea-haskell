@@ -21,7 +21,7 @@ public class HaskellPsiFileImpl extends PsiFileBase implements HaskellPsiFile {
     // Constructor
     //---------------------------------------------------------------------------------------------
 
-    public HaskellPsiFileImpl(FileViewProvider viewProvider, HaskellFileType fileType) {
+    public HaskellPsiFileImpl(@NotNull FileViewProvider viewProvider, @NotNull HaskellFileType fileType) {
         super(viewProvider, Language.findInstance(HaskellLanguage.class));
         this.fileType = fileType;
     }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project relativePaths="false" version="4">
+<project version="4">
   <component name="AntConfiguration">
     <defaultAnt bundledAnt="true" />
   </component>
@@ -38,13 +38,8 @@
     <option name="PROJECT_PROFILE" />
     <option name="USE_PROJECT_LEVEL_SETTINGS" value="false" />
   </component>
-  <component name="CodeStyleSettingsManager">
-    <option name="PER_PROJECT_SETTINGS" />
-    <option name="USE_PER_PROJECT_SETTINGS" value="false" />
-  </component>
   <component name="CompilerConfiguration">
     <option name="DEFAULT_COMPILER" value="Javac" />
-    <option name="DEPLOY_AFTER_MAKE" value="0" />
     <resourceExtensions>
       <entry name=".+\.(properties|xml|html|dtd|tld)" />
       <entry name=".+\.(gif|png|jpeg|jpg)" />
@@ -61,6 +56,7 @@
       <entry name="?*.jpg" />
       <entry name="?*.py" />
     </wildcardResourcePatterns>
+    <annotationProcessing enabled="false" useClasspath="true" />
   </component>
   <component name="CopyrightManager" default="">
     <module2copyright />
@@ -143,59 +139,51 @@
   </component>
   <component name="IdProvider" IDEtalkID="8596169B1CF4DBF70D1F90902C55C3F2" />
   <component name="InspectionProjectProfileManager">
-    <option name="PROJECT_PROFILE" value="Project Default" />
-    <option name="USE_PROJECT_LEVEL_SETTINGS" value="false" />
-    <scopes />
     <profiles>
       <profile version="1.0" is_locked="false">
         <option name="myName" value="Project Default" />
         <option name="myLocal" value="false" />
-        <inspection_tool class="CloneCallsConstructors" level="WARNING" enabled="true" />
-        <inspection_tool class="CloneInNonCloneableClass" level="WARNING" enabled="true" />
-        <inspection_tool class="CloneableImplementsClone" level="WARNING" enabled="true">
+        <inspection_tool class="CloneCallsConstructors" enabled="true" level="WARNING" enabled_by_default="true" />
+        <inspection_tool class="CloneInNonCloneableClass" enabled="true" level="WARNING" enabled_by_default="true" />
+        <inspection_tool class="CloneableImplementsClone" enabled="true" level="WARNING" enabled_by_default="true">
           <option name="m_ignoreCloneableDueToInheritance" value="false" />
         </inspection_tool>
-        <inspection_tool class="ComparatorNotSerializable" level="WARNING" enabled="true" />
-        <inspection_tool class="ExternalizableWithSerializationMethods" level="WARNING" enabled="true" />
-        <inspection_tool class="ReadObjectInitialization" level="WARNING" enabled="true" />
-        <inspection_tool class="NonSerializableWithSerializationMethods" level="WARNING" enabled="true" />
-        <inspection_tool class="NonSerializableWithSerialVersionUIDField" level="WARNING" enabled="true" />
-        <inspection_tool class="NonSerializableFieldInSerializableClass" level="WARNING" enabled="true">
-          <option name="superClassString" value="java.awt.Component" />
-        </inspection_tool>
-        <inspection_tool class="NonSerializableObjectBoundToHttpSession" level="WARNING" enabled="true" />
-        <inspection_tool class="NonSerializableObjectPassedToObjectStream" level="WARNING" enabled="true" />
-        <inspection_tool class="ReadObjectAndWriteObjectPrivate" level="WARNING" enabled="true" />
-        <inspection_tool class="ReadResolveAndWriteReplaceProtected" level="WARNING" enabled="true" />
-        <inspection_tool class="SerializableWithUnconstructableAncestor" level="WARNING" enabled="true" />
-        <inspection_tool class="SerializableHasSerialVersionUIDField" level="WARNING" enabled="true">
-          <option name="superClassString" value="java.awt.Component" />
-        </inspection_tool>
-        <inspection_tool class="SerializableInnerClassWithNonSerializableOuterClass" level="WARNING" enabled="true">
-          <option name="superClassString" value="java.awt.Component" />
-        </inspection_tool>
-        <inspection_tool class="SerializableInnerClassHasSerialVersionUIDField" level="WARNING" enabled="true">
-          <option name="superClassString" value="java.awt.Component" />
-        </inspection_tool>
-        <inspection_tool class="SerialPersistentFieldsWithWrongSignature" level="WARNING" enabled="true" />
-        <inspection_tool class="SerialVersionUIDNotStaticFinal" level="WARNING" enabled="true" />
-        <inspection_tool class="TransientFieldInNonSerializableClass" level="WARNING" enabled="true" />
-        <inspection_tool class="TransientFieldNotInitialized" level="WARNING" enabled="true" />
-        <inspection_tool class="ConstantConditions" level="WARNING" enabled="true">
+        <inspection_tool class="ComparatorNotSerializable" enabled="true" level="WARNING" enabled_by_default="true" />
+        <inspection_tool class="ConstantConditions" enabled="true" level="WARNING" enabled_by_default="true">
           <option name="SUGGEST_NULLABLE_ANNOTATIONS" value="true" />
           <option name="DONT_REPORT_TRUE_ASSERT_STATEMENTS" value="false" />
         </inspection_tool>
-        <inspection_tool class="JpaQlInspection" level="ERROR" enabled="false" />
+        <inspection_tool class="ExternalizableWithSerializationMethods" enabled="true" level="WARNING" enabled_by_default="true" />
+        <inspection_tool class="JpaQlInspection" enabled="false" level="ERROR" enabled_by_default="false" />
+        <inspection_tool class="NonSerializableFieldInSerializableClass" enabled="true" level="WARNING" enabled_by_default="true">
+          <option name="superClassString" value="java.awt.Component" />
+        </inspection_tool>
+        <inspection_tool class="NonSerializableObjectBoundToHttpSession" enabled="true" level="WARNING" enabled_by_default="true" />
+        <inspection_tool class="NonSerializableObjectPassedToObjectStream" enabled="true" level="WARNING" enabled_by_default="true" />
+        <inspection_tool class="NonSerializableWithSerialVersionUIDField" enabled="true" level="WARNING" enabled_by_default="true" />
+        <inspection_tool class="NonSerializableWithSerializationMethods" enabled="true" level="WARNING" enabled_by_default="true" />
+        <inspection_tool class="ReadObjectAndWriteObjectPrivate" enabled="true" level="WARNING" enabled_by_default="true" />
+        <inspection_tool class="ReadObjectInitialization" enabled="true" level="WARNING" enabled_by_default="true" />
+        <inspection_tool class="ReadResolveAndWriteReplaceProtected" enabled="true" level="WARNING" enabled_by_default="true" />
+        <inspection_tool class="SerialPersistentFieldsWithWrongSignature" enabled="true" level="WARNING" enabled_by_default="true" />
+        <inspection_tool class="SerialVersionUIDNotStaticFinal" enabled="true" level="WARNING" enabled_by_default="true" />
+        <inspection_tool class="SerializableHasSerialVersionUIDField" enabled="true" level="WARNING" enabled_by_default="true">
+          <option name="superClassString" value="java.awt.Component" />
+        </inspection_tool>
+        <inspection_tool class="SerializableInnerClassHasSerialVersionUIDField" enabled="true" level="WARNING" enabled_by_default="true">
+          <option name="superClassString" value="java.awt.Component" />
+        </inspection_tool>
+        <inspection_tool class="SerializableInnerClassWithNonSerializableOuterClass" enabled="true" level="WARNING" enabled_by_default="true">
+          <option name="superClassString" value="java.awt.Component" />
+        </inspection_tool>
+        <inspection_tool class="SerializableWithUnconstructableAncestor" enabled="true" level="WARNING" enabled_by_default="true" />
+        <inspection_tool class="TransientFieldInNonSerializableClass" enabled="true" level="WARNING" enabled_by_default="true" />
+        <inspection_tool class="TransientFieldNotInitialized" enabled="true" level="WARNING" enabled_by_default="true" />
       </profile>
     </profiles>
-    <list size="0" />
-  </component>
-  <component name="JavacSettings">
-    <option name="DEBUGGING_INFO" value="true" />
-    <option name="GENERATE_NO_WARNINGS" value="false" />
-    <option name="DEPRECATION" value="true" />
-    <option name="ADDITIONAL_OPTIONS_STRING" value="" />
-    <option name="MAXIMUM_HEAP_SIZE" value="128" />
+    <option name="PROJECT_PROFILE" value="Project Default" />
+    <option name="USE_PROJECT_PROFILE" value="true" />
+    <version value="1.0" />
   </component>
   <component name="JavadocGenerationManager">
     <option name="OUTPUT_DIRECTORY" />
@@ -378,9 +366,8 @@
   <component name="ProjectDetails">
     <option name="projectName" value="idea-haskell" />
   </component>
-  <component name="ProjectFileVersion" converted="true" />
   <component name="ProjectKey">
-    <option name="state" value="project:///home/akiel/coding/idea-haskell/idea-haskell.ipr" />
+    <option name="state" value="https://svn.alexanderkiel.net/projects/idea-haskell/trunk/idea-haskell.ipr" />
   </component>
   <component name="ProjectModuleManager">
     <modules>
@@ -396,13 +383,6 @@
         <list size="0" />
       </value>
     </option>
-  </component>
-  <component name="RmicSettings">
-    <option name="IS_EANABLED" value="false" />
-    <option name="DEBUGGING_INFO" value="true" />
-    <option name="GENERATE_NO_WARNINGS" value="false" />
-    <option name="GENERATE_IIOP_STUBS" value="false" />
-    <option name="ADDITIONAL_OPTIONS_STRING" value="" />
   </component>
   <component name="StarteamConfiguration">
     <option name="SERVER" value="" />
@@ -431,6 +411,31 @@
     <option name="myReportErrorsAsWarnings" value="true" />
   </component>
   <component name="SvnBranchConfigurationManager">
+    <option name="myConfigurationMap">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="branchMap">
+                <map>
+                  <entry key="https://svn.alexanderkiel.net/projects/idea-haskell/branches">
+                    <value>
+                      <list />
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="branchUrls">
+                <list>
+                  <option value="https://svn.alexanderkiel.net/projects/idea-haskell/branches" />
+                </list>
+              </option>
+              <option name="trunkUrl" value="https://svn.alexanderkiel.net/projects/idea-haskell/trunk" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="mySupportsUserInfoFilter" value="true" />
   </component>
   <component name="SvnChangesBrowserSettings">
@@ -448,7 +453,7 @@
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="true" />
   </component>
   <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="" />
+    <mapping directory="" vcs="svn" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />

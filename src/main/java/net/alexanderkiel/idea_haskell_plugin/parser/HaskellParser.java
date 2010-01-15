@@ -25,6 +25,15 @@ public class HaskellParser implements PsiParser {
     // PsiParser Implementation
     //---------------------------------------------------------------------------------------------
 
+    /**
+     * Parses the contents of the specified PSI builder and returns an AST tree with the specified type of root element.
+     * The PSI builder contents is the entire file or (if chameleon tokens are used) the text of a chameleon token which
+     * needs to be reparsed.
+     *
+     * @param root    the type of the root element in the AST tree.
+     * @param builder the builder which is used to retrieve the original file tokens and build the AST tree.
+     * @return the root of the resulting AST tree.
+     */
     @NotNull
     public ASTNode parse(IElementType root, PsiBuilder builder) {
         //TODO: remove in production
@@ -32,17 +41,17 @@ public class HaskellParser implements PsiParser {
 
         builder.setTokenTypeRemapper(new NewLineSniffer(builder));
 
-        final PsiBuilder.Marker rootMarker = builder.mark();
+        PsiBuilder.Marker rootMarker = builder.mark();
 
         Module.parseModule(builder);
 
         // Eat the rest of the tokens in the file
         if (!builder.eof()) {
-            final PsiBuilder.Marker rest = builder.mark();
+            PsiBuilder.Marker unparsed = builder.mark();
             while (!builder.eof()) {
                 builder.advanceLexer();
             }
-            rest.error("unparsed");
+            unparsed.error("unparsed");
         }
 
         rootMarker.done(root);

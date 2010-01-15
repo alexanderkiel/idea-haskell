@@ -28,7 +28,7 @@ public class HaskellParserDefinition implements ParserDefinition {
 
     @NotNull
     public Lexer createLexer(Project project) {
-        return new HaskellLayoutLexer(new HaskellCommentLexer(new HaskellIncrementalLexer()));        
+        return new HaskellLayoutLexer(new HaskellCommentLexer(new HaskellIncrementalLexer()));
     }
 
     public PsiParser createParser(Project project) {
@@ -64,7 +64,7 @@ public class HaskellParserDefinition implements ParserDefinition {
         } else if (type == IMP_DECL) {
             return new HaskellImportDeclarationImpl(node);
         } else {
-            return new HaskellWrapperElementImpl(node);
+            return new HaskellDummyElementImpl(node);
         }
     }
 
@@ -73,7 +73,7 @@ public class HaskellParserDefinition implements ParserDefinition {
     }
 
     public SpaceRequirements spaceExistanceTypeBetweenTokens(ASTNode left, ASTNode right) {
-        final Lexer lexer = createLexer(left.getPsi().getProject());
-        return LanguageUtil.canStickTokensTogetherByLexer(left, right, lexer, 0);
+        Lexer lexer = createLexer(left.getPsi().getProject());
+        return LanguageUtil.canStickTokensTogetherByLexer(left, right, lexer);
     }
 }
